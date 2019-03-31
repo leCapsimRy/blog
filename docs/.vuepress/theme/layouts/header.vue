@@ -26,6 +26,7 @@ export default {
     background:rgba(0,0,0,0);
     .header{
         background:rgba(0,0,0,0);
+        padding:0 115px;
     }
 }
 </style>

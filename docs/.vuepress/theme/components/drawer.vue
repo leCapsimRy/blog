@@ -35,9 +35,10 @@
         </div>
         <h2>关于我</h2>
         <div class="avatar">
-            <img src="http://b-ssl.duitang.com/uploads/item/201505/23/20150523001440_tEXZ3.jpeg" alt="">
+            <img src="https://thumbnail10.baidupcs.com/thumbnail/1c04e5cbac17dcdeba46858f19b8a293?fid=3459852807-250528-711562429621590&rt=pr&sign=FDTAER-DCb740ccc5511e5e8fedcff06b081203-2GQ1CzpZDvpR6h4l3NOU2XtDI1g%3d&expires=8h&chkbd=0&chkv=0&dp-logid=2073648665867677557&dp-callid=0&time=1553994000&size=c1920_u1080&quality=90&vuk=3459852807&ft=image&autopolicy=1" alt="">
         </div>
         <p class="introduce">I am Shao XI, a freelance writer and poet. I like to collect interesting pictures and put them together to prove each other and to express as much meaning and subtlety as I can. I hope my story can be liked by everyone.</p>
+        <p class="copyright">©2018-2019</br> All Rights Reserved</br>黑ICP备18002691号</br>黑公网安备 23011002000137号</p>
     </a-drawer>
   </div>
 </template>
@@ -87,7 +88,8 @@ export default {
         return {
             data: [],
             value: undefined,
-            visible:false
+            visible:false,
+            bottom:10,
         }
   },
     methods: {

@@ -1,10 +1,22 @@
 <template>
     <a-layout id="layout-container">
+        <Sider></Sider>
         <a-layout-content class="container">
-            <a-button type="primary">这里是container</a-button>  
+            <Carousel></Carousel>
         </a-layout-content>
     </a-layout>
 </template>
+<script>
+import Sider from '../components/sider'
+import Carousel from '../components/carousel'
+export default {
+    components:{
+        Sider,
+        Carousel
+    }
+}
+</script>
+
 <style lang="less" scoped>
 #layout-container{
     background:rgba(0,0,0,0);
