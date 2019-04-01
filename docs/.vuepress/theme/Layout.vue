@@ -1,6 +1,6 @@
 <template>
   <div class="theme-container">
-    <Loading v-if="display"></Loading>
+    <Loading :dis="dis"></Loading>
     <Header></Header>
     <Container></Container >
     <!-- <Content/> -->
@@ -13,7 +13,7 @@ import Container from './layouts/container'
 export default {
   data() {
     return {
-      display:true
+      dis:true
     }
   },
   components:{
@@ -21,11 +21,8 @@ export default {
     Header,
     Container
   },
-  created() {
-    this.display=true;
-  },
   mounted() {
-    this.display=false;
+    this.dis=false;
   }
 }
 </script>

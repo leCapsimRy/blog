@@ -1,5 +1,5 @@
 <template>
-    <div class="preloader">
+    <div :class="display?'preloader animated fadeIn':'preloader animated fadeOut'">
         <div class="preloader-folding-cube">
             <div class="preloader-cube1 preloader-cube"></div>
             <div class="preloader-cube2 preloader-cube"></div>
@@ -8,6 +8,22 @@
         </div>
     </div>
 </template>
+<script>
+export default {
+    props:['dis'],
+    data() {
+        return {
+            display:true
+        }
+    },
+    watch:{
+        dis:function(val){
+            this.display=val;
+        }
+    }
+}
+</script>
+
 <style lang="less" scoped>
 .preloader{
     position: fixed;
@@ -17,6 +33,11 @@
     bottom: 0;
     z-index: 900;
     background: #fff;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    -ms-transition: all 0.5s ease;
+    transition: all 0.5s ease;
     .preloader-folding-cube {
         margin: 20px auto;
         width: 40px;

@@ -1,7 +1,7 @@
 <template>
   <div class="logo">
     <a-icon type="bars" class="bars" @click="showMe" />
-    <a class="text">杯酒故事</a>
+    <a class="text">{{ $page.frontmatter.title }}</a>
     <a-drawer
     placement="left"
     :closable="false"
@@ -35,10 +35,14 @@
         </div>
         <h2>关于我</h2>
         <div class="avatar">
-            <img src="https://thumbnail10.baidupcs.com/thumbnail/1c04e5cbac17dcdeba46858f19b8a293?fid=3459852807-250528-711562429621590&rt=pr&sign=FDTAER-DCb740ccc5511e5e8fedcff06b081203-2GQ1CzpZDvpR6h4l3NOU2XtDI1g%3d&expires=8h&chkbd=0&chkv=0&dp-logid=2073648665867677557&dp-callid=0&time=1553994000&size=c1920_u1080&quality=90&vuk=3459852807&ft=image&autopolicy=1" alt="">
+            <img :src="$page.frontmatter.avatar" alt="">
         </div>
-        <p class="introduce">I am Shao XI, a freelance writer and poet. I like to collect interesting pictures and put them together to prove each other and to express as much meaning and subtlety as I can. I hope my story can be liked by everyone.</p>
-        <p class="copyright">©2018-2019</br> All Rights Reserved</br>黑ICP备18002691号</br>黑公网安备 23011002000137号</p>
+        <p class="introduce">{{ $page.frontmatter.about }}</p>
+        <p class="copyright">
+          {{ $page.frontmatter.copyright1 }}</br>
+          {{ $page.frontmatter.copyright2 }}</br>
+          {{ $page.frontmatter.copyright3 }}</br>
+          {{ $page.frontmatter.copyright4 }}</p>
     </a-drawer>
   </div>
 </template>
@@ -89,7 +93,7 @@ export default {
             data: [],
             value: undefined,
             visible:false,
-            bottom:10,
+            bottom:10
         }
   },
     methods: {
@@ -103,7 +107,6 @@ export default {
             fetch(value, data => this.data = data);
         },
         handleChange (value) {
-            console.log(value)
             this.value = value
             fetch(value, data => this.data = data);
         },

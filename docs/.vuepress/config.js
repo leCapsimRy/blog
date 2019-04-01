@@ -1,5 +1,5 @@
 module.exports = {
-    title: '杯酒故事', // 设置网站标题
+    // title: '杯酒故事', // 设置网站标题
     description: '我有故事，你有酒么？', //描述
     dest: './dist',   // 设置输出目录
     base:'/blog/',

@@ -1,40 +1,43 @@
 <template>
     <a-layout-sider class="categories">
         <div class="banner-social-buttons">
-            <div class="links">
-                <a href="#">
-                    <a-icon type="github" />
-                    <span>github</span>
-                </a>
-                <a href="#">
-                    <a-icon type="weibo" />
-                    <span>weibo</span>
-                </a>
-                <a href="#">
-                    <a-icon type="instagram" />
-                    <span>instagram</span>
+            <div 
+            class="links"
+            v-if="data.links && data.links.length">
+                <a
+                v-for="(link, index) in data.links"
+                :key="index" 
+                :href="link.url">
+                    <a-icon :type="link.name" />
+                    <span>{{ link.name }}</span>
                 </a>
             </div>
         </div>
         <div class="categories-list">
-            <div class="cell">
-                <div class="item">
-                    <a href="#">古韵</a>
-                </div>
-                <div class="item">
-                    <a href="#">当下</a>
-                </div>
-                <div class="item">
-                    <a href="#">斗酒话评</a>
-                </div>
-                <div class="item">
-                    <a href="#">酒巷小调</a>
+            <div 
+            class="cell"
+            v-if="data.categories && data.categories.length">
+                <div 
+                class="item"
+                v-for="(category, index) in data.categories"
+                :key="index" >
+                    <a :href="category.url">{{ category.name }}</a>
                 </div>
             </div>
             <a href="#" class="btn-style">进入我的博客</a>
         </div>
     </a-layout-sider>
 </template>
+<script>
+export default {
+    computed: {
+        data() {
+                return this.$page.frontmatter
+            }
+    }
+}
+</script>
+
 <style lang="less" scoped>
 .categories{
         background:#fff !important;
