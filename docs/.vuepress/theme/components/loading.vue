@@ -1,5 +1,5 @@
 <template>
-    <div :class="display?'preloader':'preloader animated fadeOut'">
+    <div :class="display?'preloader':'preloader out'">
         <div class="preloader-folding-cube">
             <div class="preloader-cube1 preloader-cube"></div>
             <div class="preloader-cube2 preloader-cube"></div>
@@ -25,6 +25,33 @@ export default {
 </script>
 
 <style lang="less" scoped>
+.out{
+    -webkit-animation: out 2.4s 1 linear both;
+    animation: out 2.4s 1 linear both;
+}
+@-webkit-keyframes out {
+  from {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  to {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+@keyframes out {
+  from {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  to {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
 .preloader{
     position: fixed;
     top: 0;
