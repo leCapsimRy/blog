@@ -1,5 +1,5 @@
 <template>
-    <div :class="display?'preloader animated fadeIn':'preloader animated fadeOut'">
+    <div :class="display?'preloader':'preloader animated fadeOut'">
         <div class="preloader-folding-cube">
             <div class="preloader-cube1 preloader-cube"></div>
             <div class="preloader-cube2 preloader-cube"></div>
@@ -33,11 +33,6 @@ export default {
     bottom: 0;
     z-index: 900;
     background: #fff;
-    -webkit-transition: all 0.5s ease;
-    -moz-transition: all 0.5s ease;
-    -o-transition: all 0.5s ease;
-    -ms-transition: all 0.5s ease;
-    transition: all 0.5s ease;
     .preloader-folding-cube {
         margin: 20px auto;
         width: 40px;
