@@ -1,4 +1,6 @@
 ## blog
+[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2FleCapsimRy%2Fblog.svg?type=shield)](https://app.fossa.io/projects/git%2Bgithub.com%2FleCapsimRy%2Fblog?ref=badge_shield)
+
 📌 personal blog
 
 ## License
@@ -8,3 +10,6 @@
 This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License.
 
 本作品采用 知识共享署名-非商业性使用-相同方式共享 4.0 国际许可协议 进行许可。
+
+
+[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2FleCapsimRy%2Fblog.svg?type=large)](https://app.fossa.io/projects/git%2Bgithub.com%2FleCapsimRy%2Fblog?ref=badge_large)
