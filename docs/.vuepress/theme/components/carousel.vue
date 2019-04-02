@@ -2,26 +2,31 @@
   <div class="carousel">
       <div class="panel">
           <div class="owl-outer">
-              <div class="owl-stage">
-                  <div class="owl-item">
+              <div 
+              class="owl-stage"
+              :style="containerStyle"
+              v-if="data[1].carousels && data[1].carousels.length">
+                  <div 
+                  class="owl-item"
+                  v-for="(carousel, index) in data[1].carousels"
+                  :key="index">
                       <div class="item">
                             <div class="a-img">
-                                <div style="background-image: url(http://beijiu.ink/wp-content/uploads/2018/05/杯酒故事-去年花6.jpg);"></div>
+                                <div :style="{'backgroundImage': 'url('+carousel.image+')'}"></div>
                             </div>
                             <div class="h">
-                                <div class="num">04</div>
+                                <div class="num">{{ '0'+(~~index+1) }}</div>
                                 <span>
-                                    <a href="">尤克里里</a>
+                                    <a href="">{{ carousel.name }}</a>
                                 </span>
                             </div>
                             <div class="btn" @click="infoShow">+</div>
-                            <div class="p-content" :class="this.checked ? 'active':''">
+                            <div class="p-content" :class="data[0] ? 'active':''">
                                 <div class="close" @click="close"></div>
                                 <div class="w">
-                                    <h5>尤克里里</h5>
-                                    <span class="date">04.05.18</span>
-                                    <p>清风  /  是拨弦的旅人  /  包裹着余生  /
-你说  /  你此行北往  /  为何  /  却坐着南来的车？</p>
+                                    <h5>{{ carousel.name }}</h5>
+                                    <span class="date">{{ carousel.createTime }}</span>
+                                    <p>{{ carousel.introduce }}</p>
                                 </div>
                                 <a class="link" href="">See full project</a>
                             </div>
@@ -30,25 +35,21 @@
               </div>
           </div>
           <div class="owl-nav">
-              <div class="owl-prev">
+              <div class="owl-prev" @click="move(imgWidth, -1)">
                   <a-icon type="right" />
               </div>
-              <div class="owl-next">
+              <div class="owl-next" @click="move(imgWidth, 1)">
                   <a-icon type="left" />
               </div>
           </div>
-          <div class="owl-dots">
-              <div class="owl-dot active">
-                  <span></span>
-              </div>
-              <div class="owl-dot">
-                  <span></span>
-              </div>
-              <div class="owl-dot">
-                  <span></span>
-              </div>
-              <div class="owl-dot">
-                  <span></span>
+          <div 
+          class="owl-dots"
+          v-if="data[1].carousels && data[1].carousels.length">
+              <div 
+                :class="index==~~data[3]-1?'owl-dot active':'owl-dot'"
+                v-for="(carousel, index) in data[1].carousels"
+                :key="index">
+                  <span>{{ '0'+(~~index+1) }}</span>
               </div>
           </div>
       </div>
@@ -60,16 +61,82 @@
 export default {
   data() {
     return {
-      checked:false
+      checked:false,
+      distance:0,
+      currentIndex:1,
+      imgWidth:0,
+      length:0
     }
   },
+  mounted() {
+      this.imgWidth=this.$el.firstChild.firstChild.firstChild.firstChild.clientWidth;
+      window.setInterval(() => {
+                this.move(this.imgWidth, -1)
+            }, 5000)
+  },
+  watch:{
+        imgWidth:function(val){
+            this.imgWidth=val;
+        }
+
+    },
   methods: {
     infoShow(){
         this.checked=true;
     },
     close(){
         this.checked=false;
+    },
+    move(offset, direction) {
+        direction === -1 ? this.currentIndex++ : this.currentIndex--
+        if (this.currentIndex > this.$page.frontmatter.carousels.length) this.currentIndex = 1
+        if (this.currentIndex < 1) this.currentIndex = this.$page.frontmatter.carousels.length
+        
+        let destination=''
+        if (this.distance === 0){
+            destination = offset * direction
+        }else{
+            destination = this.distance + offset * direction
+        }
+        this.animate(destination, direction)
+    },
+    animate(des, direc) {
+        if(des>this.imgWidth*(this.length-1)||des<this.imgWidth*(this.length-1)*-1){
+            this.des = 0;
+            this.distance =0;
+        }else{
+            if ((direc === -1 && des < this.distance) || (direc === 1 && des > this.distance)) {
+                this.distance += 30 * direc        
+                window.setTimeout(() => {
+                    this.animate(des, direc)
+                }, 30)
+            } else {
+                this.distance = des
+                if (this.des < this.imgWidth*(1-this.length)) this.distance = 0
+                if (this.des > 0) this.distance = this.imgWidth*(1-this.length)
+            }
+        }
     }
+
+  },
+  computed: {
+        data() {
+            return [
+                this.checked,
+                this.$page.frontmatter,
+                this.distance,
+                this.currentIndex,
+                this.imgWidth,
+                this.length = this.$page.frontmatter.carousels.length
+            ]
+        },
+        containerStyle() {  //这里用了计算属性，用transform来移动整个图片列表
+        console.log(this.imgWidth);
+            return {
+                transform:`translate3d(${this.distance}px, 0, 0)`,
+                width:`${this.imgWidth*this.length}px`
+            }
+        }
   }
 }
 </script>
@@ -92,16 +159,17 @@ export default {
             .owl-stage{
                 position: relative;
                 height:100%;
+                -webkit-transition: all 0.5s ease-out;
+                -moz-transition: all 0.5s ease-out;
+                -o-transition: all 0.5s ease-out;
+                -ms-transition: all 0.5s ease-out;
+                transition: all 0.5s ease-out;
                 .owl-item{
                     position: relative;
                     min-height: 1px;
                     float: left;
-                    width:100%;
+                    width:calc(~'100vw - 315px');
                     height:100%;
-                    -webkit-user-select: none;
-                    -moz-user-select: none;
-                    -ms-user-select: none;
-                    user-select: none;
                     .item{
                         position: relative;
                         overflow: hidden;
@@ -370,7 +438,6 @@ export default {
             transform: translate(0%, -50%);
             .owl-dot{
                 display: block;
-                counter-increment: slides-num;
                 opacity: 0.4;
                 -webkit-transition: all 0.3s ease;
                 -moz-transition: all 0.3s ease;
@@ -385,11 +452,10 @@ export default {
                 -moz-user-select: none;
                 -ms-user-select: none;
                 user-select: none;
-            }
-            .owl-dot:before,.owl-dot:after{
-                content: '0'counter(slides-num);
+                span{
                 display: block;
                 margin-bottom: 15px;
+                }
             }
             .owl-dot:before{
                 margin: 0;

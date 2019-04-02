@@ -26,8 +26,8 @@ export default {
 
 <style lang="less" scoped>
 .out{
-    -webkit-animation: out 2.4s 1 linear both;
-    animation: out 2.4s 1 linear both;
+    -webkit-animation: out 1.3s 1 linear both;
+    animation: out 1.3s 1 linear both;
 }
 @-webkit-keyframes out {
   from {
