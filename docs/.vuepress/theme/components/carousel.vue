@@ -20,9 +20,9 @@
                                     <a href="">{{ carousel.name }}</a>
                                 </span>
                             </div>
-                            <div class="btn" @click="infoShow">+</div>
-                            <div class="p-content" :class="data[0] ? 'active':''">
-                                <div class="close" @click="close"></div>
+                            <div class="btn" @click="infoShow(carousel)">+</div>
+                            <div class="p-content" :class="checked ===carousel ? 'active':''">
+                                <div class="close" @click="close(carousel)"></div>
                                 <div class="w">
                                     <h5>{{ carousel.name }}</h5>
                                     <span class="date">{{ carousel.createTime }}</span>
@@ -53,7 +53,7 @@
               </div>
           </div>
       </div>
-      <div class="next-slide" style="background-image: url(http://beijiu.ink/wp-content/uploads/2018/05/杯酒故事-尤克里里4.jpg);"></div>
+      <div class="next-slide"></div>
   </div>
 </template>
 <script>
@@ -70,6 +70,9 @@ export default {
   },
   mounted() {
       this.imgWidth=this.$el.firstChild.firstChild.firstChild.firstChild.clientWidth;
+      this.$el.lastChild.style.backgroundImage='url('+this.$page.frontmatter.carousels[1].image+')';
+            // console.log(this.$el.lastChild.style.backgroundImage);
+            // console.log(this.$page.frontmatter.carousels[0]);
       window.setInterval(() => {
                 this.move(this.imgWidth, -1)
             }, 5000)
@@ -81,17 +84,29 @@ export default {
 
     },
   methods: {
-    infoShow(){
-        this.checked=true;
+    infoShow(item){
+        this.checked=item;
     },
-    close(){
-        this.checked=false;
+    close(item){
+        this.checked=!item;
     },
     move(offset, direction) {
         direction === -1 ? this.currentIndex++ : this.currentIndex--
-        if (this.currentIndex > this.$page.frontmatter.carousels.length) this.currentIndex = 1
-        if (this.currentIndex < 1) this.currentIndex = this.$page.frontmatter.carousels.length
+        if (this.currentIndex > this.$page.frontmatter.carousels.length){
+            this.currentIndex = 1;  
+        }
+        if (this.currentIndex < 1) {
+            this.currentIndex = this.$page.frontmatter.carousels.length
+        }
         
+        let index = this.currentIndex;
+        if(index > this.$page.frontmatter.carousels.length-1){
+            index = 0;
+        }
+        
+        // console.log(index);
+        // console.log(this.$page.frontmatter.carousels[~~index].image);
+        this.$el.lastChild.style.backgroundImage='url('+this.$page.frontmatter.carousels[~~index].image+')';
         let destination=''
         if (this.distance === 0){
             destination = offset * direction
@@ -131,7 +146,6 @@ export default {
             ]
         },
         containerStyle() {  //这里用了计算属性，用transform来移动整个图片列表
-        console.log(this.imgWidth);
             return {
                 transform:`translate3d(${this.distance}px, 0, 0)`,
                 width:`${this.imgWidth*this.length}px`
