@@ -7,6 +7,7 @@ import Antd from 'ant-design-vue'
 import 'ant-design-vue/dist/antd.less'
 import 'animate.css'
 import './theme/styles/index.less'
+import './theme/fonts/montserrat.less'
 
 export default ({
   Vue, // VuePress 正在使用的 Vue 构造函数

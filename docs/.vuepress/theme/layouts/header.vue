@@ -27,6 +27,18 @@ export default {
     .header{
         background:rgba(0,0,0,0);
         padding:0 115px;
+        
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 100;
+        min-height: 60px;
+        -webkit-transition: all 0.3s ease;
+        -moz-transition: all 0.3s ease;
+        -o-transition: all 0.3s ease;
+        -ms-transition: all 0.3s ease;
+        transition: all 0.3s ease;
     }
 }
 </style>

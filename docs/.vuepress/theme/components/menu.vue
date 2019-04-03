@@ -1,24 +1,37 @@
 <template>
     <div 
     class="menu ant-menu ant-menu-horizontal"
-    v-if="data.menus && data.menus.length">
+    v-if="data[0].menus && data[0].menus.length">
         <span 
-        v-for="(menu, index) in data.menus"
+        v-for="(menu, index) in data[0].menus"
         :key="index"
         :data-value="menu.value" 
-        :class="index==0?'check':''">
-        <a :href="menu.url">{{ menu.name }}</a>
+        :class="index==curr?'check':''">
+        <router-link :to="menu.url">{{ menu.name }}</router-link>
         </span>
         <span><a-icon type="search" class="search" /></span>
     </div>
 </template>
 <script>
 export default {
+    data() {
+        return {
+            curr:0
+        }
+    },
     computed: {
         data() {
-                return this.$page.frontmatter
-            }
-    }
+            if(this.$page.path === '/') this.curr=0
+            if(this.$page.path === '/vblog/') this.curr=1
+            if(this.$page.path === '/') this.curr=0
+            if(this.$page.path === '/') this.curr=0
+
+            return [
+                this.$site.themeConfig,
+                this.curr
+            ]
+        }
+    },
 }
 </script>
 
@@ -27,12 +40,14 @@ export default {
     line-height: 64px;
     float:right;
     border-bottom:0;
+    background:rgba(0,0,0,0);
     span{
         padding:0 10px;
         cursor: pointer;
         transition: color 0.3s cubic-bezier(0.645, 0.045, 0.355, 1), border-color 0.3s cubic-bezier(0.645, 0.045, 0.355, 1), background 0.3s cubic-bezier(0.645, 0.045, 0.355, 1), padding 0.15s cubic-bezier(0.645, 0.045, 0.355, 1);
         a{
             color:rgba(0, 0, 0, 0.65);
+            text-decoration: none;
         }
     }
     span:hover{

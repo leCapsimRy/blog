@@ -20,6 +20,8 @@ export default {
 <style lang="less" scoped>
 #layout-container{
     background:rgba(0,0,0,0);
+    position: relative;
+    top:64px;
     .container{
         background:rgba(0,0,0,0);
         height:calc(~'100vh - 64px');

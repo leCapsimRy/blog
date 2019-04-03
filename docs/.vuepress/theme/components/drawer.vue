@@ -1,7 +1,7 @@
 <template>
   <div class="logo">
     <a-icon type="bars" class="bars" @click="showMe" />
-    <a class="text">{{ $page.frontmatter.title }}</a>
+    <a class="text">{{ $site.title }}</a>
     <a-drawer
     placement="left"
     :closable="false"
@@ -35,14 +35,14 @@
         </div>
         <h2>关于我</h2>
         <div class="avatar">
-            <img :src="$page.frontmatter.avatar" alt="">
+            <img :src="$site.themeConfig.avatar" alt="">
         </div>
-        <p class="introduce">{{ $page.frontmatter.about }}</p>
+        <p class="introduce">{{ $site.themeConfig.about }}</p>
         <p class="copyright">
-          {{ $page.frontmatter.copyright1 }}</br>
-          {{ $page.frontmatter.copyright2 }}</br>
-          {{ $page.frontmatter.copyright3 }}</br>
-          {{ $page.frontmatter.copyright4 }}</p>
+          {{ $site.themeConfig.copyright1 }}</br>
+          {{ $site.themeConfig.copyright2 }}</br>
+          {{ $site.themeConfig.copyright3 }}</br>
+          {{ $site.themeConfig.copyright4 }}</p>
     </a-drawer>
   </div>
 </template>
