@@ -15,6 +15,17 @@ module.exports = {
         {name:'博客',value:'blog',url:'/vblog/'},
         {name:'故事与酒',value:'feelings',url:'/'}
       ],
+      links:[
+        {name:'github',url:'/'},
+        {name:'weibo',url:'/'},
+        {name:'instagram',url:'/'}
+      ],
+      categories:[
+        {name:'古韵',url:'/'},
+        {name:'当下',url:'/'},
+        {name:'斗酒话评',url:'/'},
+        {name:'酒巷小调',url:'/'}
+      ],
       copyright1: '©2018-2019',
       copyright2: 'All Rights Reserved by Dr.Cycle',
       copyright3: '黑ICP备18002691号',

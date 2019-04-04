@@ -9,8 +9,14 @@
     </div>
     <a-layout-content class="container">
       <div class="vc-custom">
-        <div class="blog-items">
-          <a-card hoverable class="article">
+        <div 
+        class="blog-items"
+        v-if="data[0] && data[0].length">
+          <a-card 
+          hoverable 
+          class="article"
+          v-for="(blog, index) in data[0]"
+          :key="index">
             <div class="wrap">
               <div class="side-c">
                 <div class="col">
@@ -27,21 +33,25 @@
                 </div>
               </div>
               <div class="img">
-                <div class="categories">
-                  <router-link to="#">古韵</router-link>
-                  <router-link to="#">斗酒话评</router-link>
+                <div 
+                class="categories"
+                v-if="blog.frontmatter.tags && blog.frontmatter.tags.length">
+                  <router-link 
+                  to=""
+                  v-for="(tag, v) in blog.frontmatter.tags"
+                  :key="v">{{ tag.name }}</router-link>
                 </div>
-                <router-link to="#" style="background-image: url(http://beijiu.ink/wp-content/uploads/2018/05/杯酒故事-去年花1-1024x724.jpg)">
+                <router-link to="#" :style="{'backgroundImage': 'url('+blog.frontmatter.image+')'}">
                 </router-link>
               </div>
               <div class="content">
                 <h4>
                   <router-link to="#">
-                    去年花：破城
+                    {{ blog.frontmatter.name }}
                   </router-link>
                 </h4>
-                <div class="date">04.05.18</div>
-                <div class="desc">清风 是拨弦的旅人</div>
+                <div class="date">{{ blog.frontmatter.createTime }}</div>
+                <div class="desc">{{ blog.frontmatter.introduce }}</div>
                 <router-link to="#" class="read-more">
                   <span>Read More</span>
                   <a-icon type="swap-right" />
@@ -52,12 +62,19 @@
         </div>
       </div>
     </a-layout-content>
+    
+                    <Content/>
   </a-layout>
 </template>
 <script>
 export default {
-  components:{
-    
+  computed: {
+    data() {
+      return [
+        this.$site.pages
+                .filter(item => item.path !== '/'&&item.path !== '/vblog/')
+      ]
+    }
   }
 }
 </script>
@@ -261,6 +278,38 @@ export default {
                 }
               }
             }
+            :nth-child(even){
+                .wrap{
+                  padding-left: 0;
+                  padding-right: 70px;
+                  .side-c{
+                    left: auto;
+                    right: 34px;
+                    top: 0;
+                    -moz-transform: rotate(-90deg);
+                    -ms-transform: rotate(-90deg);
+                    -webkit-transform: rotate(-90deg);
+                    -o-transform: rotate(-90deg);
+                    transform: rotate(-90deg);
+                    -moz-transform-origin: 100% 0;
+                    -ms-transform-origin: 100% 0;
+                    -webkit-transform-origin: 100% 0;
+                    -o-transform-origin: 100% 0;
+                    transform-origin: 100% 0;
+                    border-left: 0;
+                    border-right: 2px solid;
+                  }
+                  .img{
+                    left: auto;
+                    right: 70px;
+                  }
+                  .content{
+                    margin-left: 0;
+                    margin-right: 420px;
+                    float: right;
+                  }
+                }
+              }
             .article:hover{
               box-shadow:0 0 0 rgba(0, 0, 0, 0);
             }

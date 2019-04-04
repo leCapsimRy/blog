@@ -26,7 +26,7 @@ export default {
   },
   mounted() {
     this.dis=false;
-    console.log(this.$site);
+    console.log(this);
   },
   computed:{
     isHome() {

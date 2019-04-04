@@ -5,28 +5,28 @@
               <div 
               class="owl-stage"
               :style="containerStyle"
-              v-if="data[1].carousels && data[1].carousels.length">
+              v-if="data[1] && data[1].length">
                   <div 
                   class="owl-item"
-                  v-for="(carousel, index) in data[1].carousels"
+                  v-for="(carousel, index) in data[1]"
                   :key="index">
                       <div class="item">
                             <div class="a-img">
-                                <div :style="{'backgroundImage': 'url('+carousel.image+')'}"></div>
+                                <div :style="{'backgroundImage': 'url('+carousel.frontmatter.image+')'}"></div>
                             </div>
                             <div class="h">
                                 <div class="num">{{ '0'+(~~index+1) }}</div>
                                 <span>
-                                    <a href="">{{ carousel.name }}</a>
+                                    <a href="">{{ carousel.frontmatter.name }}</a>
                                 </span>
                             </div>
                             <div class="btn" @click="infoShow(carousel)">+</div>
                             <div class="p-content" :class="checked ===carousel ? 'active':''">
                                 <div class="close" @click="close(carousel)"></div>
                                 <div class="w">
-                                    <h5>{{ carousel.name }}</h5>
-                                    <span class="date">{{ carousel.createTime }}</span>
-                                    <p>{{ carousel.introduce }}</p>
+                                    <h5>{{ carousel.frontmatter.name }}</h5>
+                                    <span class="date">{{ carousel.frontmatter.createTime }}</span>
+                                    <p>{{ carousel.frontmatter.introduce }}</p>
                                 </div>
                                 <a class="link" href="">See full project</a>
                             </div>
@@ -35,19 +35,21 @@
               </div>
           </div>
           <div class="owl-nav">
-              <div class="owl-prev" @click="move(imgWidth, -1)">
+              <!-- <div class="owl-prev" @click="move(imgWidth, -1)"> -->
+            <div class="owl-prev">
                   <a-icon type="right" />
               </div>
-              <div class="owl-next" @click="move(imgWidth, 1)">
+              <!-- <div class="owl-next" @click="move(imgWidth, 1)"> -->
+            <div class="owl-next">
                   <a-icon type="left" />
               </div>
           </div>
           <div 
           class="owl-dots"
-          v-if="data[1].carousels && data[1].carousels.length">
+          v-if="data[1] && data[1].length">
               <div 
                 :class="index==~~data[3]-1?'owl-dot active':'owl-dot'"
-                v-for="(carousel, index) in data[1].carousels"
+                v-for="(carousel, index) in data[1]"
                 :key="index">
                   <span>{{ '0'+(~~index+1) }}</span>
               </div>
@@ -63,14 +65,14 @@ export default {
     return {
       checked:false,
       distance:0,
-      currentIndex:1,
+      currentIndex:2,
       imgWidth:0,
       length:0
     }
   },
   mounted() {
       this.imgWidth=this.$el.firstChild.firstChild.firstChild.firstChild.clientWidth;
-      this.$el.lastChild.style.backgroundImage='url('+this.$page.frontmatter.carousels[1].image+')';
+      this.$el.lastChild.style.backgroundImage='url('+this.$site.pages[3].frontmatter.image+')';
             // console.log(this.$el.lastChild.style.backgroundImage);
             // console.log(this.$page.frontmatter.carousels[0]);
       window.setInterval(() => {
@@ -92,21 +94,21 @@ export default {
     },
     move(offset, direction) {
         direction === -1 ? this.currentIndex++ : this.currentIndex--
-        if (this.currentIndex > this.$page.frontmatter.carousels.length){
-            this.currentIndex = 1;  
+        if (this.currentIndex > this.$site.pages.length-1){
+            this.currentIndex = 2;  
         }
         if (this.currentIndex < 1) {
-            this.currentIndex = this.$page.frontmatter.carousels.length
+            this.currentIndex = this.$site.pages.length-1
         }
         
-        let index = this.currentIndex;
-        if(index > this.$page.frontmatter.carousels.length-1){
-            index = 0;
+        let index = this.currentIndex+1;
+        if(index > this.$site.pages.length-1){
+            index = 2;
         }
         
-        // console.log(index);
+        // console.log(this.currentIndex);
         // console.log(this.$page.frontmatter.carousels[~~index].image);
-        this.$el.lastChild.style.backgroundImage='url('+this.$page.frontmatter.carousels[~~index].image+')';
+        this.$el.lastChild.style.backgroundImage='url('+this.$site.pages[~~index].frontmatter.image+')';
         let destination=''
         if (this.distance === 0){
             destination = offset * direction
@@ -135,14 +137,22 @@ export default {
 
   },
   computed: {
+      filteredList(){
+          return this.$site.pages
+          .filter(item => item.path !== '/')
+          .sort((a,b) => {
+            return b.frontmatter
+          })
+      },
         data() {
             return [
                 this.checked,
-                this.$page.frontmatter,
+                this.$site.pages
+                .filter(item => item.path !== '/'&&item.path !== '/vblog/'),
                 this.distance,
                 this.currentIndex,
                 this.imgWidth,
-                this.length = this.$page.frontmatter.carousels.length
+                this.length = this.$site.pages.length-2
             ]
         },
         containerStyle() {  //这里用了计算属性，用transform来移动整个图片列表
