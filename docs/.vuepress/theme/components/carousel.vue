@@ -148,7 +148,7 @@ export default {
             return [
                 this.checked,
                 this.$site.pages
-                .filter(item => item.path !== '/'&&item.path !== '/vblog/'),
+                .filter(item => item.path !== '/'&&item.path !== '/posts/'),
                 this.distance,
                 this.currentIndex,
                 this.imgWidth,

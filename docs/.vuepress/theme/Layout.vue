@@ -4,14 +4,15 @@
     <Header></Header>
     <Container v-if="isHome"></Container >
     <VBlog v-else-if="isBlog"></VBlog>
-    <!-- <Content/> -->
+    <Post v-else></Post>
   </div>
 </template>
 <script>
 import Loading from './components/loading'
 import Header from './layouts/header'
 import Container from './layouts/container'
-import VBlog from './vblog/index'
+import VBlog from './layouts/vblog'
+import Post from './layouts/post'
 export default {
   data() {
     return {
@@ -22,18 +23,19 @@ export default {
     Loading,
     Header,
     Container,
-    VBlog
+    VBlog,
+    Post
   },
   mounted() {
     this.dis=false;
-    console.log(this);
+    console.log(this.$router);
   },
   computed:{
     isHome() {
       return this.$page.path === '/';
     },
     isBlog() {
-      return this.$page.path === '/vblog/';
+      return this.$page.path === '/posts/';
     }
   }
 }

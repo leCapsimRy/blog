@@ -22,9 +22,10 @@ export default {
     computed: {
         data() {
             if(this.$page.path === '/') this.curr=0
-            if(this.$page.path === '/vblog/') this.curr=1
-            if(this.$page.path === '/') this.curr=0
-            if(this.$page.path === '/') this.curr=0
+            else if(this.$page.path === '/posts/') this.curr=1
+            else if(this.$page.path.indexOf('posts')!== -1 ) this.curr=-1
+            else if(this.$page.path === '') this.curr=-1
+            else this.curr=-1
 
             return [
                 this.$site.themeConfig,

@@ -1,6 +1,10 @@
 /* 全局补充样式 */
 *{
-    font-family: montserrat;
+    font-family: montserrat !important;
+}
+.header-anchor{
+    visibility: hidden;
+    position: absolute;
 }
 //首页logo旁的浮窗搜索
 .ant-drawer{
@@ -47,4 +51,14 @@
 }
 .ant-card-body{
     padding:0 !important;
+}
+// catalo
+.ant-anchor-wrapper{
+    background-color:rgba(0,0,0,0) !important;
+    .ant-anchor{
+        .ant-anchor-link{
+            padding:7px 7px 7px 16px;
+            color:#fff;
+        }
+    }
 }

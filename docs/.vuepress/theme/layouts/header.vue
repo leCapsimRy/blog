@@ -23,7 +23,7 @@ export default {
 
 <style lang="less" scoped>
 #layout-header{
-    background:rgba(0,0,0,0);
+    background:#fff;
     position: fixed;
     top: 0;
     left: 0;

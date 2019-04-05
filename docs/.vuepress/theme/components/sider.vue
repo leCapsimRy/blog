@@ -24,7 +24,11 @@
                     <a :href="category.url">{{ category.name }}</a>
                 </div>
             </div>
-            <a href="#" class="btn-style">进入我的博客</a>
+            <router-link 
+            to="/posts/"
+            class="btn-style">
+                进入我的博客
+            </router-link>
         </div>
     </a-layout-sider>
 </template>
