@@ -8,23 +8,27 @@ module.exports = {
       ['link', { rel: 'shortcut icon', type: "image/x-icon", href: "./favicon.ico" }]
    ],
     themeConfig: { //主题配置
-      avatar:'http://beijiu.ink/wp-content/uploads/2018/05/微信图片_20180427155534.jpg',
+      avatar:'images/avatar.jpg',
       about:'我是邵十一，一个自由作家和诗人。我喜欢收集有意境的照片与我的作品摆在一处相互印证，尽可能的表达出我所理解到的各自所要表达的意义与精妙。希望我的故事能够得到大家的喜欢。',
+      mail:'marsak@live.cn',
+      wechat:'lecapsimry',
+      subscription:'如果你也喜欢我的故事，请留下你的邮箱，以便于第一时间看到更新的故事。',
       menus:[
         {name:'首页',value:'home',url:'/'},
         {name:'博客',value:'blog',url:'/posts/'},
-        {name:'故事与酒',value:'feelings',url:'/'}
+        {name:'画廊',value:'gallery',url:'/gallery/'},
+        {name:'故事与酒',value:'story',url:'/story/'}
       ],
       links:[
-        {name:'github',url:'/'},
-        {name:'weibo',url:'/'},
+        {name:'github',url:'https://github.com/leCapsimRy/blog'},
+        {name:'weibo',url:'https://weibo.com/DyrieNnn'},
         {name:'instagram',url:'/'}
       ],
       categories:[
-        {name:'古韵',url:'/'},
-        {name:'当下',url:'/'},
-        {name:'斗酒话评',url:'/'},
-        {name:'酒巷小调',url:'/'}
+        {name:'古韵',url:'/posts/'},
+        {name:'当下',url:'/posts/'},
+        {name:'斗酒话评',url:'/posts/'},
+        {name:'酒巷小调',url:'/posts/'}
       ],
       copyright1: '©2018-2019',
       copyright2: 'All Rights Reserved by Dr.Cycle',

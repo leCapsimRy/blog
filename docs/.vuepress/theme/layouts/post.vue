@@ -3,7 +3,7 @@
         <a-layout-content class="post">
             <div 
             class="post-banner"
-            :style="{'backgroundImage': 'url('+this.$page.frontmatter.image+')'}">
+            :style="{'backgroundImage': 'url(../images/posts/'+this.$page.frontmatter.image+')'}">
                 <div class="container">
                     <div class="cell">
                         <h1 class="h">{{ this.$page.frontmatter.name }}</h1>

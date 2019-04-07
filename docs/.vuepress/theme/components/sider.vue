@@ -7,7 +7,8 @@
                 <a
                 v-for="(link, index) in data.links"
                 :key="index" 
-                :href="link.url">
+                :href="link.url"
+                target="_blank">
                     <a-icon :type="link.name" />
                     <span>{{ link.name }}</span>
                 </a>

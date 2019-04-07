@@ -12,12 +12,15 @@
                   :key="index">
                       <div class="item">
                             <div class="a-img">
-                                <div :style="{'backgroundImage': 'url('+carousel.frontmatter.image+')'}"></div>
+                                <div :style="{'backgroundImage': 'url(images/posts/'+carousel.frontmatter.image+')'}"></div>
                             </div>
                             <div class="h">
                                 <div class="num">{{ '0'+(~~index+1) }}</div>
                                 <span>
-                                    <a href="">{{ carousel.frontmatter.name }}</a>
+                                    <router-link 
+                                    :to="carousel.path">
+                                    {{ carousel.frontmatter.name }}
+                                    </router-link>
                                 </span>
                             </div>
                             <div class="btn" @click="infoShow(carousel)">+</div>
@@ -28,19 +31,21 @@
                                     <span class="date">{{ carousel.frontmatter.createTime }}</span>
                                     <p>{{ carousel.frontmatter.introduce }}</p>
                                 </div>
-                                <a class="link" href="">See full project</a>
+                                <router-link class="link" :to="carousel.path">
+                                    See full project
+                                </router-link>
                             </div>
                       </div>
                   </div>
               </div>
           </div>
           <div class="owl-nav">
-              <!-- <div class="owl-prev" @click="move(imgWidth, -1)"> -->
-            <div class="owl-prev">
+              <div class="owl-prev" @click="move(imgWidth, -1)">
+            <!-- <div class="owl-prev"> -->
                   <a-icon type="right" />
               </div>
-              <!-- <div class="owl-next" @click="move(imgWidth, 1)"> -->
-            <div class="owl-next">
+              <div class="owl-next" @click="move(imgWidth, 1)">
+            <!-- <div class="owl-next"> -->
                   <a-icon type="left" />
               </div>
           </div>
@@ -48,7 +53,7 @@
           class="owl-dots"
           v-if="data[1] && data[1].length">
               <div 
-                :class="index==~~data[3]-1?'owl-dot active':'owl-dot'"
+                :class="index==~~data[3]-2?'owl-dot active':'owl-dot'"
                 v-for="(carousel, index) in data[1]"
                 :key="index">
                   <span>{{ '0'+(~~index+1) }}</span>
@@ -67,17 +72,16 @@ export default {
       distance:0,
       currentIndex:2,
       imgWidth:0,
-      length:0
+      length:0,
+      transitionEnd:true
     }
   },
   mounted() {
       this.imgWidth=this.$el.firstChild.firstChild.firstChild.firstChild.clientWidth;
-      this.$el.lastChild.style.backgroundImage='url('+this.$site.pages[3].frontmatter.image+')';
-            // console.log(this.$el.lastChild.style.backgroundImage);
-            // console.log(this.$page.frontmatter.carousels[0]);
-      window.setInterval(() => {
-                this.move(this.imgWidth, -1)
-            }, 5000)
+      this.$el.lastChild.style.backgroundImage='url(images/posts/'+this.$site.pages[3].frontmatter.image+')';
+    //   window.setInterval(() => {
+    //             this.move(this.imgWidth, -1)
+    //         }, 5000)
   },
   watch:{
         imgWidth:function(val){
@@ -93,11 +97,13 @@ export default {
         this.checked=!item;
     },
     move(offset, direction) {
+        if (!this.transitionEnd) return  //这里是闸
+        this.transitionEnd = false       //开闸以后再把闸关上
         direction === -1 ? this.currentIndex++ : this.currentIndex--
         if (this.currentIndex > this.$site.pages.length-1){
             this.currentIndex = 2;  
         }
-        if (this.currentIndex < 1) {
+        if (this.currentIndex < 2) {
             this.currentIndex = this.$site.pages.length-1
         }
         
@@ -105,10 +111,7 @@ export default {
         if(index > this.$site.pages.length-1){
             index = 2;
         }
-        
-        // console.log(this.currentIndex);
-        // console.log(this.$page.frontmatter.carousels[~~index].image);
-        this.$el.lastChild.style.backgroundImage='url('+this.$site.pages[~~index].frontmatter.image+')';
+        this.$el.lastChild.style.backgroundImage='url(images/posts/'+this.$site.pages[~~index].frontmatter.image+')';
         let destination=''
         if (this.distance === 0){
             destination = offset * direction
@@ -118,16 +121,20 @@ export default {
         this.animate(destination, direction)
     },
     animate(des, direc) {
-        if(des>this.imgWidth*(this.length-1)||des<this.imgWidth*(this.length-1)*-1){
+        if(des<this.imgWidth*(this.length-1)*-1){
+            this.transitionEnd = true      //闸再次打开
             this.des = 0;
             this.distance =0;
-        }else{
-            if ((direc === -1 && des < this.distance) || (direc === 1 && des > this.distance)) {
-                this.distance += 30 * direc        
-                window.setTimeout(() => {
-                    this.animate(des, direc)
-                }, 30)
+        } else if(Math.sign(des) === 1) {
+            this.transitionEnd = true      //闸再次打开
+            this.des = this.imgWidth*(1-this.length);
+            this.distance =this.imgWidth*(1-this.length);
+        } else{
+            if ((direc === -1 && des < this.distance) || (direc === 1 && des < this.distance)) {
+                this.distance = des
+                this.animate(des, direc)
             } else {
+                this.transitionEnd = true      //闸再次打开
                 this.distance = des
                 if (this.des < this.imgWidth*(1-this.length)) this.distance = 0
                 if (this.des > 0) this.distance = this.imgWidth*(1-this.length)
@@ -155,9 +162,10 @@ export default {
                 this.length = this.$site.pages.length-2
             ]
         },
-        containerStyle() {  //这里用了计算属性，用transform来移动整个图片列表
+        containerStyle() {
             return {
                 transform:`translate3d(${this.distance}px, 0, 0)`,
+                transition: `0.5s`,
                 width:`${this.imgWidth*this.length}px`
             }
         }
@@ -453,7 +461,7 @@ export default {
             counter-reset: slides-num;
             position: absolute;
             top: 50%;
-            font-size: 12px;
+            font-size: 14px;
             font-weight: bold;
             -moz-transform: translate(0%, -50%);
             -ms-transform: translate(0%, -50%);

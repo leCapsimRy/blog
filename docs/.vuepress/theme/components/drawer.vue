@@ -1,7 +1,9 @@
 <template>
   <div class="logo">
     <a-icon type="bars" class="bars" @click="showMe" />
-    <a class="text">{{ $site.title }}</a>
+    <router-link class="text" to="/">
+      {{ $site.title }}
+    </router-link>
     <a-drawer
     placement="left"
     :closable="false"
@@ -35,7 +37,7 @@
         </div>
         <h2>关于我</h2>
         <div class="avatar">
-            <img :src="$site.themeConfig.avatar" alt="">
+            <img :src="$withBase($site.themeConfig.avatar)" alt="">
         </div>
         <p class="introduce">{{ $site.themeConfig.about }}</p>
         <p class="copyright">
@@ -128,6 +130,7 @@ export default {
             .text{
                 font-size:1.459em;
                 color:#000;
+                text-decoration: none;
             }
         }
 </style>

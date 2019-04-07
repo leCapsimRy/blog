@@ -27,8 +27,7 @@ export default {
     Post
   },
   mounted() {
-    this.dis=false;
-    console.log(this.$router);
+    this.dis=false
   },
   computed:{
     isHome() {

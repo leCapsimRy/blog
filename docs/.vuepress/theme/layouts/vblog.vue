@@ -1,5 +1,5 @@
 <template>
-  <a-layout  id="layout-container" class="vblog">
+  <a-layout id="layout-container" class="vblog">
     <div class="body-grid-lines">
             <div></div>
             <div></div>
@@ -43,7 +43,7 @@
                 </div>
                 <router-link 
                 :to="blog.path" 
-                :style="{'backgroundImage': 'url('+blog.frontmatter.image+')'}">
+                :style="{'backgroundImage': 'url(../images/posts/'+blog.frontmatter.image+')'}">
                 </router-link>
               </div>
               <div class="content">
@@ -64,10 +64,15 @@
         </div>
       </div>
     </a-layout-content>
+    <Footer></Footer>
   </a-layout>
 </template>
 <script>
+import Footer from './footer'
 export default {
+  components:{
+    Footer
+  },
   computed: {
     data() {
       return [
@@ -81,7 +86,6 @@ export default {
 <style lang="less" scoped>
 #layout-container{
     background:rgba(0,0,0,0);
-    height:1000px;
     padding-top:64px;
     .body-grid-lines {
       text-align: justify;

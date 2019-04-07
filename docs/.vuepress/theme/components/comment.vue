@@ -69,7 +69,7 @@ export default {
         this.comments = [
           {
             author: '吃瓜群众',
-            // avatar: '$withBase("/images/cgqz.jpg")',
+            avatar: `../images/cgqz.jpg`,
             content: this.value,
             datetime: moment().fromNow(),
           },
