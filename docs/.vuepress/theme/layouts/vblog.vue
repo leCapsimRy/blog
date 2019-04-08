@@ -68,6 +68,7 @@
   </a-layout>
 </template>
 <script>
+
 import Footer from './footer'
 export default {
   components:{

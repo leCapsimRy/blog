@@ -529,7 +529,7 @@ export default {
         bottom: 0;
         right: 0;
         height: 110px;
-        width: 115px;
+        width: 112px;
         background-size: cover;
         background-position: 50%;
         cursor: pointer;

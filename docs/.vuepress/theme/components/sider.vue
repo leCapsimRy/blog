@@ -22,7 +22,7 @@
                 class="item"
                 v-for="(category, index) in data.categories"
                 :key="index" >
-                    <a :href="category.url">{{ category.name }}</a>
+                    <router-link :to="category.url">{{ category.name }}</router-link>
                 </div>
             </div>
             <router-link 
