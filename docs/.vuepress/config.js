@@ -7,6 +7,7 @@ module.exports = {
     head: [
       ['link', { rel: 'shortcut icon', type: "image/x-icon", href: "./favicon.ico" }]
    ],
+    theme:'cycle',
     themeConfig: { //主题配置
       avatar:'images/avatar.jpg',
       about:'我是邵十一，一个自由作家和诗人。我喜欢收集有意境的照片与我的作品摆在一处相互印证，尽可能的表达出我所理解到的各自所要表达的意义与精妙。希望我的故事能够得到大家的喜欢。',
