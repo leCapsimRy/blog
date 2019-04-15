@@ -14,6 +14,8 @@ module.exports = {
       mail:'marsak@live.cn',
       wechat:'lecapsimry',
       subscription:'如果你也喜欢我的故事，请留下你的邮箱，以便于第一时间看到更新的故事。',
+      id:'IAnNOYyMOUag6VRK7BOqnGiv-gzGzoHsz',
+      key:'Htf6rewl561a8EUbdL9f8jIB',
       menus:[
         {name:'首页',value:'home',url:'/'},
         {name:'博客',value:'blog',url:'/posts/'},
