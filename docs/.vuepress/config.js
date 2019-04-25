@@ -1,11 +1,12 @@
 module.exports = {
-    title: '杯酒故事 - 邵十一的博客', // 设置网站标题
+    title: '杯酒故事', // 设置网站标题
     description: '我有故事，你有酒么？', //描述
     dest: './dist',   // 设置输出目录
     // base:'/blog/',
     port: 2233, //端口
     head: [
-      ['link', { rel: 'shortcut icon', type: "image/x-icon", href: "./favicon.ico" }]
+      ['link', { rel: 'shortcut icon', type: "image/x-icon", href: "./favicon.ico" }],
+      ['meta', {name:'viewport', content: 'initial-scale=1,maximum-scale=3,minimum-scale=1'}]
    ],
     theme:'cycle',
     themeConfig: { //主题配置
@@ -18,24 +19,22 @@ module.exports = {
       key:'Htf6rewl561a8EUbdL9f8jIB',
       menus:[
         {name:'首页',value:'home',url:'/'},
-        {name:'博客',value:'blog',url:'/posts/'},
-        {name:'画廊',value:'gallery',url:'/gallery/'},
-        {name:'故事与酒',value:'story',url:'/story/'}
+        {name:'三杯',value:'blog',url:'/posts/'},
+        {name:'两盏',value:'gallery',url:'/gallery/'},
+        {name:'淡酒',value:'story',url:'/story/'}
       ],
       links:[
         {name:'github',url:'https://github.com/leCapsimRy/blog'},
         {name:'weibo',url:'https://weibo.com/DyrieNnn'},
         {name:'instagram',url:'/'}
       ],
-      categories:[
-        {name:'古韵',url:'/posts/'},
-        {name:'当下',url:'/posts/'},
-        {name:'斗酒话评',url:'/posts/'},
-        {name:'酒巷小调',url:'/posts/'}
-      ],
-      copyright1: '©2018-2019',
-      copyright2: 'All Rights Reserved by Dr.Cycle',
-      copyright3: '黑ICP备18002691号',
-      copyright4: '黑公网安备 23011002000137号',
+      // categories:[
+      //   {name:'古韵',url:'/posts/'},
+      //   {name:'当下',url:'/posts/'},
+      //   {name:'斗酒话评',url:'/posts/'},
+      //   {name:'酒巷小调',url:'/posts/'}
+      // ],
+      footer: '©2018-2019 杯酒故事',
+      copyright: '黑ICP备18002691号，黑公网安备 23011002000137号'
     }
   }
