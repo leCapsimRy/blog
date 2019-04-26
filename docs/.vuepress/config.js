@@ -4,8 +4,10 @@ module.exports = {
     dest: './dist',   // 设置输出目录
     // base:'/blog/',
     port: 2233, //端口
+    serviceWorker:true,
     head: [
-      ['link', { rel: 'shortcut icon', type: "image/x-icon", href: "./favicon.ico" }],
+      ['link', { rel: 'shortcut icon', type: "image/x-icon", href: "/favicon.ico" }],
+      ['link', { rel: 'manifest', href: '/manifest.json' }],
       ['meta', {name:'viewport', content: 'initial-scale=1,maximum-scale=3,minimum-scale=1'}]
    ],
     theme:'cycle',
