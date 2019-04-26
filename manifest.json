@@ -1,0 +1,15 @@
+{
+    "name": "杯酒故事",
+    "description": "我有故事，你有酒么？", 
+    "display": "standalone", 
+    "start_url": "/", 
+    "theme_color": "#ffffff", 
+    "background_color": "#ffffff", 
+    "icons": [ 
+      {
+      "src": "images/icon/favicon.png",
+      "sizes": "32x32",  
+      "type": "image/png"  
+    }
+    ]
+  }
