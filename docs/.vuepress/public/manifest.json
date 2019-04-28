@@ -8,31 +8,36 @@
     "icons": [ 
         {
             "src": "images/icon/favicon.png",
+            "sizes": "32x32",  
+            "type": "image/png"  
+        },
+        {
+            "src": "images/icon/beijiu-48x48.png",
             "sizes": "48x48",  
             "type": "image/png"  
         },
         {
-            "src": "images/icon/favicon.png",
+            "src": "images/icon/beijiu-72x72.png",
             "sizes": "72x72",  
             "type": "image/png" 
         },
         {
-            "src": "images/icon/favicon.png",
+            "src": "images/icon/beijiu-96x96.png",
             "sizes": "96x96",  
             "type": "image/png" 
         },
         {
-            "src": "images/icon/favicon.png",
+            "src": "images/icon/beijiu-144x144.png",
             "sizes": "144x144",  
             "type": "image/png" 
         },
         {
-            "src": "images/icon/favicon.png",
+            "src": "images/icon/beijiu-168x168.png",
             "sizes": "168x168",  
             "type": "image/png" 
         },
         {
-            "src": "images/icon/favicon.png",
+            "src": "images/icon/beijiu-192x192.png",
             "sizes": "192x192",  
             "type": "image/png" 
         }
