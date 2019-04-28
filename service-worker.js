@@ -21,7 +21,7 @@ importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox
 self.__precacheManifest = [
   {
     "url": "404.html",
-    "revision": "5a2e977d69b399c9de7371958c15470e"
+    "revision": "00b5df85b88b94ad4b28c16a23b89aec"
   },
   {
     "url": "assets/css/0.styles.e0a7736d.css",
@@ -72,12 +72,12 @@ self.__precacheManifest = [
     "revision": "cf8bd13d6d925d35e5138ecd6e1d1d29"
   },
   {
-    "url": "assets/js/app.eb8e90d4.js",
-    "revision": "75303a09317b7f03c8b3b5ce674f93c1"
+    "url": "assets/js/app.c03058f1.js",
+    "revision": "787d07315fa37ba27db7414f95482816"
   },
   {
     "url": "gallery/index.html",
-    "revision": "874fb318e79cbae36313ba2b9f0dd1fb"
+    "revision": "27c48785d30b795f9621327c01bd1ba1"
   },
   {
     "url": "images/404.png",
@@ -92,8 +92,32 @@ self.__precacheManifest = [
     "revision": "0dbd20fb8c61f202f9484357f5c41cbf"
   },
   {
+    "url": "images/icon/beijiu-144x144.png",
+    "revision": "cbede35bad7d8409a265bc80b42eb340"
+  },
+  {
+    "url": "images/icon/beijiu-168x168.png",
+    "revision": "002471e3558e781eb3b736b97d7de279"
+  },
+  {
+    "url": "images/icon/beijiu-192x192.png",
+    "revision": "3c37f0760b8dadd155118c831d488002"
+  },
+  {
+    "url": "images/icon/beijiu-48x48.png",
+    "revision": "9b526be91afd55caab9a1af46067b00f"
+  },
+  {
+    "url": "images/icon/beijiu-72x72.png",
+    "revision": "0bf9f23213d6fd150bd28c3a3079c267"
+  },
+  {
+    "url": "images/icon/beijiu-96x96.png",
+    "revision": "ff4e570f9aaed14a51a47a0154518909"
+  },
+  {
     "url": "images/icon/favicon.png",
-    "revision": "610b4de0627f25dc442f855cd1eaa67a"
+    "revision": "a783adb8f5c6de6bd543747abc14b31d"
   },
   {
     "url": "images/posts/去年花-破城.jpg",
@@ -113,31 +137,31 @@ self.__precacheManifest = [
   },
   {
     "url": "index.html",
-    "revision": "ea6678a58531369dae77f50dcb8630e3"
+    "revision": "fdd52f09ad149a022ec06e20455e91ac"
   },
   {
     "url": "posts/index.html",
-    "revision": "2b9458037dde33a2012a295b4cd55e97"
+    "revision": "05cf1e064b07f2e604b062d2714fdc6d"
   },
   {
     "url": "posts/去年花-破城.html",
-    "revision": "c3d9e33ecbec130305b1535905d36d5a"
+    "revision": "c86eebd511147f5611251978c1d8b707"
   },
   {
     "url": "posts/尤克里里.html",
-    "revision": "7eb1f99e5ff54bda4fdd0024c3cfc218"
+    "revision": "7e1004456330337347d42576de3ee71d"
   },
   {
     "url": "posts/忆-远处近景的小楼.html",
-    "revision": "a2be7e40780cd1d8720f481bea9d206d"
+    "revision": "76a56975436b8500c255d39a04fb4686"
   },
   {
     "url": "posts/雨霖铃-乌衣有志.html",
-    "revision": "331d5f4d9f05161dca66a96fb5b46be8"
+    "revision": "a79628265839c68539e76e5eb304c836"
   },
   {
     "url": "story/index.html",
-    "revision": "035af2a7debf94e93f7c9d8022250764"
+    "revision": "b339d99a2c4d52521c241ed9d804b32b"
   }
 ].concat(self.__precacheManifest || []);
 workbox.precaching.suppressWarnings();
