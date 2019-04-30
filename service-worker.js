@@ -21,7 +21,7 @@ importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox
 self.__precacheManifest = [
   {
     "url": "404.html",
-    "revision": "c79919f2a00984fda01a7b3a73d2fdb2"
+    "revision": "fb757495cf31a27048c42d45282d7261"
   },
   {
     "url": "assets/css/0.styles.e0a7736d.css",
@@ -72,12 +72,12 @@ self.__precacheManifest = [
     "revision": "cf8bd13d6d925d35e5138ecd6e1d1d29"
   },
   {
-    "url": "assets/js/app.467d50b5.js",
-    "revision": "e5677d2dc751ab8187579be64737a984"
+    "url": "assets/js/app.32b710ea.js",
+    "revision": "e24826b7705407502ab6ae2a2d8eba49"
   },
   {
     "url": "gallery/index.html",
-    "revision": "39d93977e70978e1e3b440cdaf2938eb"
+    "revision": "c04147eb2b08e902fd37e16bc82b9bf6"
   },
   {
     "url": "images/404.png",
@@ -92,28 +92,12 @@ self.__precacheManifest = [
     "revision": "0dbd20fb8c61f202f9484357f5c41cbf"
   },
   {
-    "url": "images/icon/beijiu-114x114.png",
-    "revision": "8482c15d6759699df928a055c6c75350"
-  },
-  {
-    "url": "images/icon/beijiu-120x120.png",
-    "revision": "7b21ade096a01d1eb7c1e15087c1c887"
-  },
-  {
     "url": "images/icon/beijiu-144x144.png",
     "revision": "cbede35bad7d8409a265bc80b42eb340"
   },
   {
-    "url": "images/icon/beijiu-152x152.png",
-    "revision": "53994ad69729a2ad8174ff1cf4997f39"
-  },
-  {
     "url": "images/icon/beijiu-168x168.png",
     "revision": "002471e3558e781eb3b736b97d7de279"
-  },
-  {
-    "url": "images/icon/beijiu-180x180.png",
-    "revision": "c985713159584182741509672059f52b"
   },
   {
     "url": "images/icon/beijiu-192x192.png",
@@ -124,20 +108,8 @@ self.__precacheManifest = [
     "revision": "9b526be91afd55caab9a1af46067b00f"
   },
   {
-    "url": "images/icon/beijiu-57x57.png",
-    "revision": "cc28702b89a7c0135891398a67c6fe24"
-  },
-  {
-    "url": "images/icon/beijiu-60x60.png",
-    "revision": "fb36b7b50046b015b2134671d72c852b"
-  },
-  {
     "url": "images/icon/beijiu-72x72.png",
     "revision": "0bf9f23213d6fd150bd28c3a3079c267"
-  },
-  {
-    "url": "images/icon/beijiu-76x76.png",
-    "revision": "88b3191744c75a9ca56def68120bc3d9"
   },
   {
     "url": "images/icon/beijiu-96x96.png",
@@ -165,31 +137,31 @@ self.__precacheManifest = [
   },
   {
     "url": "index.html",
-    "revision": "cbc5c5bce2a282ceaece44dc3cebb469"
+    "revision": "8c2a0127afebcdfa6e5248b147b9975f"
   },
   {
     "url": "posts/index.html",
-    "revision": "4272aa6940759da4176ab3d8a554f412"
+    "revision": "1f24d7d37d4c9351b52a3de6391b0ffe"
   },
   {
     "url": "posts/去年花-破城.html",
-    "revision": "17ae2323ae0e0b91f3a96797a82258d9"
+    "revision": "f1a8a70b086f28e86a8a1899f57519f5"
   },
   {
     "url": "posts/尤克里里.html",
-    "revision": "48dde9f3989030a9e5854c313688a9c2"
+    "revision": "090fbf5c3c908e70cc6af4fc8ae2e73d"
   },
   {
     "url": "posts/忆-远处近景的小楼.html",
-    "revision": "ffbd0d03990ebbe8610cc7e39c705572"
+    "revision": "1b98eaa321500dd036f7cbd9d6df51f1"
   },
   {
     "url": "posts/雨霖铃-乌衣有志.html",
-    "revision": "80c5b64ab6c2ec9dec0ce610906dccd4"
+    "revision": "884705071d53f0fbdb743d0e4888f482"
   },
   {
     "url": "story/index.html",
-    "revision": "2ea3de2b81af1498b7773b9b578bb953"
+    "revision": "15ace91d8b5d77b961f8bbba29b95ca7"
   }
 ].concat(self.__precacheManifest || []);
 workbox.precaching.suppressWarnings();
