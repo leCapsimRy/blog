@@ -21,7 +21,7 @@ importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox
 self.__precacheManifest = [
   {
     "url": "404.html",
-    "revision": "8bf15b4c2186fae779ee65c26a991693"
+    "revision": "709bebd22f5fd7064a7b15c6504c3e36"
   },
   {
     "url": "assets/css/0.styles.e0a7736d.css",
@@ -72,12 +72,12 @@ self.__precacheManifest = [
     "revision": "cf8bd13d6d925d35e5138ecd6e1d1d29"
   },
   {
-    "url": "assets/js/app.60e121b9.js",
-    "revision": "ebf8dd21b1576e19e5829ea9906d6f71"
+    "url": "assets/js/app.ea70aae3.js",
+    "revision": "9202651ed91792e7e5868e5ce2f67a5d"
   },
   {
     "url": "gallery/index.html",
-    "revision": "9035b6199be18f3241532e3c83c8d025"
+    "revision": "715a624f5563f50c94610035f484a3fc"
   },
   {
     "url": "images/404.png",
@@ -93,7 +93,7 @@ self.__precacheManifest = [
   },
   {
     "url": "images/icon/apple-icon.png",
-    "revision": "4f50334c39f3387123f2223c15004fea"
+    "revision": "0ea811dcec15980417d316f3395841ab"
   },
   {
     "url": "images/icon/beijiu-144x144.png",
@@ -141,31 +141,31 @@ self.__precacheManifest = [
   },
   {
     "url": "index.html",
-    "revision": "cc7772f9dd23ca831c510b3ab5f2e577"
+    "revision": "c954cac4c4aded8b9acc1c44492b25b5"
   },
   {
     "url": "posts/index.html",
-    "revision": "80ac5b684347a429ac7f6a789cba8722"
+    "revision": "82a69b9355a40dd24d080d3aac00289a"
   },
   {
     "url": "posts/去年花-破城.html",
-    "revision": "1946881490392f706e5466549b7aaebb"
+    "revision": "9e8b10ee6c65a66dfd7b02fe2ebf507d"
   },
   {
     "url": "posts/尤克里里.html",
-    "revision": "c56834f104cc5a15c5d154788c483e42"
+    "revision": "e210ded0dea2216f1514975868dd9ef9"
   },
   {
     "url": "posts/忆-远处近景的小楼.html",
-    "revision": "dc7cf14b5fcc8aeadbaf5b7abd93139a"
+    "revision": "f42936b287cbccbfc453c4cf794bc90f"
   },
   {
     "url": "posts/雨霖铃-乌衣有志.html",
-    "revision": "f35b0d592df54ba8ae436ef2ecfe4370"
+    "revision": "502c1161dc1b660857a90c61b10608b2"
   },
   {
     "url": "story/index.html",
-    "revision": "08452f4aabedc1b75362ecbfa7a01a23"
+    "revision": "492a0528a82e920b98233d7af6efc7b2"
   }
 ].concat(self.__precacheManifest || []);
 workbox.precaching.suppressWarnings();
