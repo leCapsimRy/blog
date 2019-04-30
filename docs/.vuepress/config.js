@@ -7,7 +7,8 @@ module.exports = {
     serviceWorker:true,
     head: [
       ['link', { rel: 'shortcut icon', type: "image/x-icon", href: "/favicon.ico" }],
-      ['link', { rel: 'manifest', href: '/manifest.json' }],
+      ['link', { rel: 'apple-touch-icon', sizes: "200x200", href: "/images/icon/apple-icon.png" }],
+      ['link', { rel: 'manifest', href: '/manifest.json',crossOrigin: 'use-credentials' }],
       ['meta', {name:'author', content: '邵十一(leCapsimRy, Dr.Cycle)'}],
       ['meta', {name:'keywords', content: '博客, 杯酒故事, 小说, 诗歌, 文学, 短篇, 中篇, 邵十一, leCapsimRy, Dr.Cycle, cycle, vue, vuepress, vuepress-theme, vuepress-theme-cycle'}],
       ['meta', {name:'viewport', content: 'initial-scale=1,maximum-scale=3,minimum-scale=1'}]
