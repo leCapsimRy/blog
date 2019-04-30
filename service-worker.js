@@ -21,7 +21,7 @@ importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox
 self.__precacheManifest = [
   {
     "url": "404.html",
-    "revision": "f54fc0d07e31bab85a999be3a2578fe4"
+    "revision": "c79919f2a00984fda01a7b3a73d2fdb2"
   },
   {
     "url": "assets/css/0.styles.e0a7736d.css",
@@ -72,12 +72,12 @@ self.__precacheManifest = [
     "revision": "cf8bd13d6d925d35e5138ecd6e1d1d29"
   },
   {
-    "url": "assets/js/app.c1e946a7.js",
-    "revision": "43ec1d2ffd8cf71f615c530e2218e69b"
+    "url": "assets/js/app.467d50b5.js",
+    "revision": "e5677d2dc751ab8187579be64737a984"
   },
   {
     "url": "gallery/index.html",
-    "revision": "418dc0f0a72277fd5ba402530397dac5"
+    "revision": "39d93977e70978e1e3b440cdaf2938eb"
   },
   {
     "url": "images/404.png",
@@ -165,31 +165,31 @@ self.__precacheManifest = [
   },
   {
     "url": "index.html",
-    "revision": "92a95a7f2a41917f171ecca2991f2adb"
+    "revision": "cbc5c5bce2a282ceaece44dc3cebb469"
   },
   {
     "url": "posts/index.html",
-    "revision": "eb6970e93c6e8764c7eb7ab679a57e09"
+    "revision": "4272aa6940759da4176ab3d8a554f412"
   },
   {
     "url": "posts/去年花-破城.html",
-    "revision": "0c2a73bc1248c69084ed5ffceb4850c5"
+    "revision": "17ae2323ae0e0b91f3a96797a82258d9"
   },
   {
     "url": "posts/尤克里里.html",
-    "revision": "849f9bc14470cd849471ae7532c5b009"
+    "revision": "48dde9f3989030a9e5854c313688a9c2"
   },
   {
     "url": "posts/忆-远处近景的小楼.html",
-    "revision": "0b25fab2b379398d6928bb181c124f23"
+    "revision": "ffbd0d03990ebbe8610cc7e39c705572"
   },
   {
     "url": "posts/雨霖铃-乌衣有志.html",
-    "revision": "1d0ca31fdce1adb1cb155c52f91efdd4"
+    "revision": "80c5b64ab6c2ec9dec0ce610906dccd4"
   },
   {
     "url": "story/index.html",
-    "revision": "ea4bd2af240c77ae97807ca098a9e191"
+    "revision": "2ea3de2b81af1498b7773b9b578bb953"
   }
 ].concat(self.__precacheManifest || []);
 workbox.precaching.suppressWarnings();
