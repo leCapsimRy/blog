@@ -21,7 +21,7 @@ importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox
 self.__precacheManifest = [
   {
     "url": "404.html",
-    "revision": "7c09577c984b7073ff946e91c8a61030"
+    "revision": "8bf15b4c2186fae779ee65c26a991693"
   },
   {
     "url": "assets/css/0.styles.e0a7736d.css",
@@ -72,12 +72,12 @@ self.__precacheManifest = [
     "revision": "cf8bd13d6d925d35e5138ecd6e1d1d29"
   },
   {
-    "url": "assets/js/app.0ecf6cfd.js",
-    "revision": "7289e154bdb44b3dac61db80da3af2a8"
+    "url": "assets/js/app.60e121b9.js",
+    "revision": "ebf8dd21b1576e19e5829ea9906d6f71"
   },
   {
     "url": "gallery/index.html",
-    "revision": "fbbd0b1da9454839534eeac9804b7916"
+    "revision": "9035b6199be18f3241532e3c83c8d025"
   },
   {
     "url": "images/404.png",
@@ -90,6 +90,10 @@ self.__precacheManifest = [
   {
     "url": "images/cgqz.jpg",
     "revision": "0dbd20fb8c61f202f9484357f5c41cbf"
+  },
+  {
+    "url": "images/icon/apple-icon.png",
+    "revision": "4f50334c39f3387123f2223c15004fea"
   },
   {
     "url": "images/icon/beijiu-144x144.png",
@@ -137,31 +141,31 @@ self.__precacheManifest = [
   },
   {
     "url": "index.html",
-    "revision": "da1e325acfd7255a8fef67a20f744405"
+    "revision": "cc7772f9dd23ca831c510b3ab5f2e577"
   },
   {
     "url": "posts/index.html",
-    "revision": "b96ab92971c2cac20676e467da8114c1"
+    "revision": "80ac5b684347a429ac7f6a789cba8722"
   },
   {
     "url": "posts/去年花-破城.html",
-    "revision": "bc8a16f3d2cd4e6d5c439debd39ace04"
+    "revision": "1946881490392f706e5466549b7aaebb"
   },
   {
     "url": "posts/尤克里里.html",
-    "revision": "3ccc70f7f27f922db949dd88492c9a83"
+    "revision": "c56834f104cc5a15c5d154788c483e42"
   },
   {
     "url": "posts/忆-远处近景的小楼.html",
-    "revision": "5918470caed0e1d00491b11d26475c21"
+    "revision": "dc7cf14b5fcc8aeadbaf5b7abd93139a"
   },
   {
     "url": "posts/雨霖铃-乌衣有志.html",
-    "revision": "09a47bad8c4121c6da7fc08ae6010f80"
+    "revision": "f35b0d592df54ba8ae436ef2ecfe4370"
   },
   {
     "url": "story/index.html",
-    "revision": "2a3c1d86a352798d30b28fabe7e73dcc"
+    "revision": "08452f4aabedc1b75362ecbfa7a01a23"
   }
 ].concat(self.__precacheManifest || []);
 workbox.precaching.suppressWarnings();
