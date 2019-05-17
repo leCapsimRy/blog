@@ -21,63 +21,59 @@ importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox
 self.__precacheManifest = [
   {
     "url": "404.html",
-    "revision": "709bebd22f5fd7064a7b15c6504c3e36"
+    "revision": "46b7c0f29b032ef4c863db0a79e8ef80"
   },
   {
-    "url": "assets/css/0.styles.e0a7736d.css",
-    "revision": "2a39b55bbd8a027e008296644f2721f2"
+    "url": "assets/css/0.styles.6c891455.css",
+    "revision": "e4ef159752373470f8b87a760cd49852"
   },
   {
-    "url": "assets/fonts/Montserrat-Light.f5e955ef.otf",
-    "revision": "f5e955efb2bef154ac6dd150903f2d45"
+    "url": "assets/js/10.0bcf2492.js",
+    "revision": "c0b9d7a823541c0d37497cd087b964e3"
   },
   {
-    "url": "assets/js/10.6504f38b.js",
-    "revision": "a64e5fe4dbb57ba9c3c6e48135ec38a7"
+    "url": "assets/js/11.93f6f172.js",
+    "revision": "fa894296b0e85aa52616ff13c3c826b0"
   },
   {
-    "url": "assets/js/11.ffc27587.js",
-    "revision": "87e2cafc397e30d30bcada15c7ec33c5"
+    "url": "assets/js/2.fff3499e.js",
+    "revision": "39c963c6bbe938608caf00eba9cb72ea"
   },
   {
-    "url": "assets/js/2.8db7f74f.js",
-    "revision": "a28627c432a3facfb99b7fd13381e424"
+    "url": "assets/js/3.e68df712.js",
+    "revision": "25f02220ed35a35423fc632680a16715"
   },
   {
-    "url": "assets/js/3.954c4633.js",
-    "revision": "5e2508f9b88adbec823cf918dbcfce20"
+    "url": "assets/js/4.7621df3b.js",
+    "revision": "7a8473b00cf3acee8eb9738903f61d70"
   },
   {
-    "url": "assets/js/4.73e00012.js",
-    "revision": "c3c31898b0ac2c4b152815b45b77980f"
+    "url": "assets/js/5.2cd27de6.js",
+    "revision": "e84671447b4bd58c6288c7ac73fe43a6"
   },
   {
-    "url": "assets/js/5.755d1487.js",
-    "revision": "e484560725ae368600db30f5587f1749"
+    "url": "assets/js/6.4f603486.js",
+    "revision": "16bd4f0398b0df7be745c2e2cbf63173"
   },
   {
-    "url": "assets/js/6.cb4f8948.js",
-    "revision": "347dfedf97f5bf96f561910fcc0c4aba"
+    "url": "assets/js/7.acb6374b.js",
+    "revision": "3577d5661b56ae7c650ab613e74e4554"
   },
   {
-    "url": "assets/js/7.c5737849.js",
-    "revision": "aac07d32fe91e13f80ae50f4070bb876"
+    "url": "assets/js/8.134e508f.js",
+    "revision": "edfdb5e929c7d9fdb93fb5a8d93db25e"
   },
   {
-    "url": "assets/js/8.50f7ee23.js",
-    "revision": "3d4c4f612de6ec36b68b3ce79383bce3"
+    "url": "assets/js/9.4c8b2c5d.js",
+    "revision": "c4d0659369c4b36358f4499e7841220b"
   },
   {
-    "url": "assets/js/9.8a67c14c.js",
-    "revision": "cf8bd13d6d925d35e5138ecd6e1d1d29"
-  },
-  {
-    "url": "assets/js/app.ea70aae3.js",
-    "revision": "9202651ed91792e7e5868e5ce2f67a5d"
+    "url": "assets/js/app.5a246534.js",
+    "revision": "d3a011313272e74b75d297304e62feec"
   },
   {
     "url": "gallery/index.html",
-    "revision": "715a624f5563f50c94610035f484a3fc"
+    "revision": "bce0ea92cf7ce4a78ced1fdd2a75f727"
   },
   {
     "url": "images/404.png",
@@ -93,7 +89,7 @@ self.__precacheManifest = [
   },
   {
     "url": "images/icon/apple-icon.png",
-    "revision": "0ea811dcec15980417d316f3395841ab"
+    "revision": "3cd1393ae9f41d215b1f36918b6a33a0"
   },
   {
     "url": "images/icon/beijiu-144x144.png",
@@ -141,31 +137,31 @@ self.__precacheManifest = [
   },
   {
     "url": "index.html",
-    "revision": "c954cac4c4aded8b9acc1c44492b25b5"
+    "revision": "4d5a0a170a415fdd88d817252664bb08"
   },
   {
     "url": "posts/index.html",
-    "revision": "82a69b9355a40dd24d080d3aac00289a"
+    "revision": "eeb160200e8c1a8cbff59a91feb66458"
   },
   {
     "url": "posts/去年花-破城.html",
-    "revision": "9e8b10ee6c65a66dfd7b02fe2ebf507d"
+    "revision": "7300139d2da0b9f7680a528a15489e4a"
   },
   {
     "url": "posts/尤克里里.html",
-    "revision": "e210ded0dea2216f1514975868dd9ef9"
+    "revision": "161b084e03b6db7a81050fa125baaab7"
   },
   {
     "url": "posts/忆-远处近景的小楼.html",
-    "revision": "f42936b287cbccbfc453c4cf794bc90f"
+    "revision": "aa66554209856655d89be4ab25e172e4"
   },
   {
     "url": "posts/雨霖铃-乌衣有志.html",
-    "revision": "502c1161dc1b660857a90c61b10608b2"
+    "revision": "f61197a9059d9fc217afa60f18d3d370"
   },
   {
     "url": "story/index.html",
-    "revision": "492a0528a82e920b98233d7af6efc7b2"
+    "revision": "529c0939eade0008fadb92e1cc751ae1"
   }
 ].concat(self.__precacheManifest || []);
 workbox.precaching.suppressWarnings();
