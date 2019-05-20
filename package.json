@@ -14,7 +14,7 @@
     "less-loader": "^4.1.0",
     "vue-lazyload": "^1.2.6",
     "vuepress": "^0.14.10",
-    "vuepress-theme-cycle": "^0.7.6"
+    "vuepress-theme-cycle": "^0.7.9"
   },
   "directories": {
     "doc": "docs"
