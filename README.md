@@ -1,4 +1,4 @@
-## 📙 杯酒故事 [![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2FleCapsimRy%2Fblog.svg?type=shield)](https://app.fossa.com/projects/git%2Bgithub.com%2FleCapsimRy%2Fblog?ref=badge_shield)
+## 📙 杯酒故事 [![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2FleCapsimRy%2Fblog.svg?type=shield)](https://app.fossa.io/projects/git%2Bgithub.com%2FleCapsimRy%2Fblog?ref=badge_shield)
 
 我有故事，你有酒么？
 
@@ -19,3 +19,7 @@
 This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>.
 
 本作品采用<a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">知识共享署名-非商业性使用-相同方式共享 4.0 国际许可协议</a>进行许可。
+
+[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2FleCapsimRy%2Fblog.svg?type=large)](https://app.fossa.io/projects/git%2Bgithub.com%2FleCapsimRy%2Fblog?ref=badge_large)
+
+
