@@ -4,7 +4,12 @@ module.exports = {
     dest: './dist',   // 设置输出目录
     // base:'/blog/',
     port: 2233, //端口
-    serviceWorker:true,
+    plugins: {
+      '@vuepress/pwa':{
+        serviceWorker: true,
+        updatePopup: true
+      }
+    },
     head: [
       ['link', { rel: 'shortcut icon', type: "image/x-icon", href: "/favicon.ico" }],
       ['link', { rel: 'apple-touch-icon', sizes: "200x200", href: "/images/icon/apple-icon.png" }],

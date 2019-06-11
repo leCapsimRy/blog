@@ -10,11 +10,12 @@
   "author": "",
   "license": "CC BY-NC-SA 4.0",
   "devDependencies": {
+    "@vuepress/plugin-pwa": "^1.0.0-rc.1",
     "less": "^2.7.3",
     "less-loader": "^4.1.0",
     "vue-lazyload": "^1.2.6",
-    "vuepress": "^0.14.10",
-    "vuepress-theme-cycle": "^0.7.9"
+    "vuepress": "^1.0.1",
+    "vuepress-theme-cycle": "^0.7.10"
   },
   "directories": {
     "doc": "docs"
