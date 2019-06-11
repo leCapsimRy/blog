@@ -1,0 +1,38 @@
+{
+    "name": "杯酒故事",
+    "description": "我有故事，你有酒么？", 
+    "display": "standalone", 
+    "start_url": "/", 
+    "theme_color": "#ffffff", 
+    "background_color": "#ffffff", 
+    "icons": [ 
+        {
+            "src": "images/icon/favicon.png",
+            "sizes": "32x32"
+        },
+        {
+            "src": "images/icon/beijiu-48x48.png",
+            "sizes": "48x48"
+        },
+        {
+            "src": "images/icon/beijiu-72x72.png",
+            "sizes": "72x72"
+        },
+        {
+            "src": "images/icon/beijiu-96x96.png",
+            "sizes": "96x96"
+        },
+        {
+            "src": "images/icon/beijiu-144x144.png",
+            "sizes": "144x144"
+        },
+        {
+            "src": "images/icon/beijiu-168x168.png",
+            "sizes": "168x168"
+        },
+        {
+            "src": "images/icon/beijiu-192x192.png",
+            "sizes": "192x192"
+        }
+    ]
+  }
