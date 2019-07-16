@@ -21,7 +21,7 @@ importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox
 self.__precacheManifest = [
   {
     "url": "404.html",
-    "revision": "c1cca53a4f1a2113ffb381fa3262310b"
+    "revision": "27ec56252806c1f35b5d77aa7966fd7f"
   },
   {
     "url": "assets/css/0.styles.52f414ce.css",
@@ -40,32 +40,32 @@ self.__precacheManifest = [
     "revision": "a619f30e29c3189b130ea2b9820a994f"
   },
   {
-    "url": "assets/js/12.43b78652.js",
-    "revision": "1b2611872d81af5bb8b4efce035078e1"
+    "url": "assets/js/12.e1bf6ea0.js",
+    "revision": "b2737d832cec93b943b15c8d8dd58a16"
   },
   {
-    "url": "assets/js/13.04ee3bb6.js",
-    "revision": "c3c132498919124108c5b240ee14ef68"
+    "url": "assets/js/13.f0bfdef8.js",
+    "revision": "99ff68476afdb0acb52c0ad2f9c031df"
   },
   {
-    "url": "assets/js/14.ef2b1879.js",
-    "revision": "193943658060ff47e710875e01cf3542"
+    "url": "assets/js/14.741ed9f1.js",
+    "revision": "bbdc3ed7fcd9989b6a5078c1864cc22f"
   },
   {
     "url": "assets/js/15.4a40f930.js",
     "revision": "d8cc26bb19a7126435b43dd239345dcb"
   },
   {
-    "url": "assets/js/16.baf4d9ac.js",
-    "revision": "129f8a5fa5cb841d8b5fd48826f602f8"
+    "url": "assets/js/16.786b2a03.js",
+    "revision": "bce65ba401274a11ed9c37a68101357d"
   },
   {
     "url": "assets/js/17.2d7e102a.js",
     "revision": "6aa08251deaa0971036b39f7500714db"
   },
   {
-    "url": "assets/js/18.cfc4ee8a.js",
-    "revision": "f2577facac59b2d76d0ca1d9fb5c26e2"
+    "url": "assets/js/18.44238f55.js",
+    "revision": "3d5355179f5d7346d5e1c509d5d15480"
   },
   {
     "url": "assets/js/19.87d3cf82.js",
@@ -104,12 +104,12 @@ self.__precacheManifest = [
     "revision": "7ac0a1b1cd3e60a940bbb75554deadaa"
   },
   {
-    "url": "assets/js/app.4ff6b683.js",
-    "revision": "f69a1c53480a09f51d302f9524fdfbf4"
+    "url": "assets/js/app.8f603402.js",
+    "revision": "da31c811a4f25804f7190e074e36d2d0"
   },
   {
     "url": "gallery/index.html",
-    "revision": "1a2e117d3d7aa852100f0ee70dc96ce8"
+    "revision": "262361a0cd8a659985fea801016ca6e8"
   },
   {
     "url": "images/avatar.jpg",
@@ -169,31 +169,31 @@ self.__precacheManifest = [
   },
   {
     "url": "index.html",
-    "revision": "9ae81ba5fb007917d623673936403c50"
+    "revision": "9fd65bba9016bcf0570f786a14c2913e"
   },
   {
     "url": "posts/index.html",
-    "revision": "377b748cfb908d39d84f3ebb6bfece6f"
+    "revision": "6a165c982dfcc80b11b27652c2e67d69"
   },
   {
     "url": "posts/去年花-破城.html",
-    "revision": "40321f2a6b4465d0d9d59eff1833fbe7"
+    "revision": "71dfddd711f9a4faa7a4c304f4541764"
   },
   {
     "url": "posts/尤克里里.html",
-    "revision": "b095acfc75a08fc299b10c5b761ed0c1"
+    "revision": "e2cc9bc02a0a61f1c98e41ea62dc40c9"
   },
   {
     "url": "posts/忆-远处近景的小楼.html",
-    "revision": "17e65754306c6627eeeba81f9055ec20"
+    "revision": "de3e9b82262248db143f55cb09d7adc0"
   },
   {
     "url": "posts/雨霖铃-乌衣有志.html",
-    "revision": "c53e7451830f4f0b92eddd2375b6f81b"
+    "revision": "a5df079135d4040d653d4ada7ef2c07d"
   },
   {
     "url": "story/index.html",
-    "revision": "97be170736ba244de7b641970494fad8"
+    "revision": "c3086a70f241221b102ceb79e6adaad5"
   }
 ].concat(self.__precacheManifest || []);
 workbox.precaching.suppressWarnings();
