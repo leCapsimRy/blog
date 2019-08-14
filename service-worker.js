@@ -21,7 +21,7 @@ importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox
 self.__precacheManifest = [
   {
     "url": "404.html",
-    "revision": "27ec56252806c1f35b5d77aa7966fd7f"
+    "revision": "090a8b8a318d5e5d0b1bed61ca52d7bb"
   },
   {
     "url": "assets/css/0.styles.52f414ce.css",
@@ -44,12 +44,12 @@ self.__precacheManifest = [
     "revision": "b2737d832cec93b943b15c8d8dd58a16"
   },
   {
-    "url": "assets/js/13.f0bfdef8.js",
-    "revision": "99ff68476afdb0acb52c0ad2f9c031df"
+    "url": "assets/js/13.04ee3bb6.js",
+    "revision": "c3c132498919124108c5b240ee14ef68"
   },
   {
-    "url": "assets/js/14.741ed9f1.js",
-    "revision": "bbdc3ed7fcd9989b6a5078c1864cc22f"
+    "url": "assets/js/14.bdf3c5bf.js",
+    "revision": "ad7c78c58e0b3391a1fd78ec4e13518a"
   },
   {
     "url": "assets/js/15.4a40f930.js",
@@ -104,12 +104,12 @@ self.__precacheManifest = [
     "revision": "7ac0a1b1cd3e60a940bbb75554deadaa"
   },
   {
-    "url": "assets/js/app.8f603402.js",
-    "revision": "da31c811a4f25804f7190e074e36d2d0"
+    "url": "assets/js/app.00d92730.js",
+    "revision": "cc519998b633b2f35fcd619df69e7748"
   },
   {
     "url": "gallery/index.html",
-    "revision": "262361a0cd8a659985fea801016ca6e8"
+    "revision": "86f5ffda8eaf313ea027746da740a26a"
   },
   {
     "url": "images/avatar.jpg",
@@ -169,31 +169,31 @@ self.__precacheManifest = [
   },
   {
     "url": "index.html",
-    "revision": "9fd65bba9016bcf0570f786a14c2913e"
+    "revision": "de98bb11e9838b356858735a61486510"
   },
   {
     "url": "posts/index.html",
-    "revision": "6a165c982dfcc80b11b27652c2e67d69"
+    "revision": "8b8a6818bdb291dc5d3a0eaefc32d191"
   },
   {
     "url": "posts/去年花-破城.html",
-    "revision": "71dfddd711f9a4faa7a4c304f4541764"
+    "revision": "54a108edc84fd120b4e433011866aa13"
   },
   {
     "url": "posts/尤克里里.html",
-    "revision": "e2cc9bc02a0a61f1c98e41ea62dc40c9"
+    "revision": "5fb45d491aa947e88f740e051fe7e6dd"
   },
   {
     "url": "posts/忆-远处近景的小楼.html",
-    "revision": "de3e9b82262248db143f55cb09d7adc0"
+    "revision": "3076e2f6802122ed7729a30a7f6ac393"
   },
   {
     "url": "posts/雨霖铃-乌衣有志.html",
-    "revision": "a5df079135d4040d653d4ada7ef2c07d"
+    "revision": "3325d4568672b42893c3ea1d453f695b"
   },
   {
     "url": "story/index.html",
-    "revision": "c3086a70f241221b102ceb79e6adaad5"
+    "revision": "4037ae40a3ccf65a0c396b0381f9dd55"
   }
 ].concat(self.__precacheManifest || []);
 workbox.precaching.suppressWarnings();
