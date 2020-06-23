@@ -44,7 +44,7 @@ module.exports = {
       //   {name:'斗酒话评',url:'/posts/'},
       //   {name:'酒巷小调',url:'/posts/'}
       // ],
-      footer: '© 2018-2019 🎐 杯酒故事',
+      footer: '© 2018-2020 🎐 杯酒故事',
       copyright: ''
     }
   }
