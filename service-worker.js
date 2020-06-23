@@ -27,7 +27,7 @@ self.addEventListener('message', (event) => {
 self.__precacheManifest = [
   {
     "url": "404.html",
-    "revision": "38fb6e92e53eb87303781e2f599ecfe5"
+    "revision": "840bea90c4e242b84fe6ff67b5b25c76"
   },
   {
     "url": "assets/css/0.styles.c238e674.css",
@@ -58,8 +58,8 @@ self.__precacheManifest = [
     "revision": "1d329aef4acc70b91a5457fa993cb488"
   },
   {
-    "url": "assets/js/15.8116b252.js",
-    "revision": "9d2ef8c0e1992034c06806f2aad7964f"
+    "url": "assets/js/15.f029fde6.js",
+    "revision": "f5a97b409f092b9311cd1cf434304ae2"
   },
   {
     "url": "assets/js/16.69f59135.js",
@@ -70,12 +70,12 @@ self.__precacheManifest = [
     "revision": "1e3c84c84a987c998bb850358c181de5"
   },
   {
-    "url": "assets/js/18.3d82cb0c.js",
-    "revision": "670929bae96504706958e591dada07f0"
+    "url": "assets/js/18.e5853deb.js",
+    "revision": "a8f4c5ded77375dd50870356991bdb4f"
   },
   {
-    "url": "assets/js/19.fad61365.js",
-    "revision": "51243ce8b9c4b8492b59890f80e5dccc"
+    "url": "assets/js/19.116a48cc.js",
+    "revision": "83755e893912e5cc503bac068ce59b53"
   },
   {
     "url": "assets/js/2.fe704f59.js",
@@ -118,12 +118,12 @@ self.__precacheManifest = [
     "revision": "019461ff99f0674cbffb010eb0e2bcf7"
   },
   {
-    "url": "assets/js/app.7d183f91.js",
-    "revision": "9b68f816a736d10b5538e5b0d5dbe4f8"
+    "url": "assets/js/app.eeb1984a.js",
+    "revision": "d4d5131631550a3c7b72fd1ea90a01e7"
   },
   {
     "url": "gallery/index.html",
-    "revision": "41b1629078d2a4ac08ef5f0b465bc698"
+    "revision": "c38c19e7a1fa5b742359b0da5a92e629"
   },
   {
     "url": "images/avatar.jpg",
@@ -187,35 +187,35 @@ self.__precacheManifest = [
   },
   {
     "url": "index.html",
-    "revision": "1ed20208048a35adaafbcb57806ad196"
+    "revision": "c28afdafce0df64c36250f612a97ec8e"
   },
   {
     "url": "posts/2019这一年.html",
-    "revision": "bbdaeca11ab3fa028da834645819ca75"
+    "revision": "978745f9e4afaded3496f3b76bbfea27"
   },
   {
     "url": "posts/index.html",
-    "revision": "d5754fc7340e71295ff0e0d94b16be29"
+    "revision": "451d2ddf361ac68882cd055b76ad6233"
   },
   {
     "url": "posts/去年花-破城.html",
-    "revision": "6ddac37d9e8045ba354b2c03e7167975"
+    "revision": "cd3fe66beafeaed18180f1e7a997cdcc"
   },
   {
     "url": "posts/尤克里里.html",
-    "revision": "e04dd6a7bd1859fc864d862c0aef2d09"
+    "revision": "d3d035ea46c4b97b778bd6a0b9fcd0bd"
   },
   {
     "url": "posts/忆-远处近景的小楼.html",
-    "revision": "28fdd1ff38302e018d325dd07d2a9c60"
+    "revision": "0e0684e7d797f60301099b6e1c1177aa"
   },
   {
     "url": "posts/雨霖铃-乌衣有志.html",
-    "revision": "f19772e19e5b0aa847743baa2f689617"
+    "revision": "f9aaf85a705cf581a960d887dc566b61"
   },
   {
     "url": "story/index.html",
-    "revision": "29f1126b199836b4c5dc3ef228db3f0c"
+    "revision": "9bfc63e645efb47485ed168d791774b7"
   }
 ].concat(self.__precacheManifest || []);
 workbox.precaching.precacheAndRoute(self.__precacheManifest, {});
